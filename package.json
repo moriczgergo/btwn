@@ -1,0 +1,24 @@
+{
+  "name": "btwn",
+  "version": "1.0.0",
+  "description": "Check if a number is in your min-max bounds.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "coverage": "nyc --reporter=html --reporter=text mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moriczgergo/btwn.git"
+  },
+  "keywords": [
+    "between",
+    "numbers"
+  ],
+  "author": "skiilaa",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/moriczgergo/btwn/issues"
+  },
+  "homepage": "https://github.com/moriczgergo/btwn#readme"
+}
