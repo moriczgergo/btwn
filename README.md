@@ -1,4 +1,4 @@
-# btwn [![npm](https://img.shields.io/npm/v/btwn.svg)]() [![npm](https://img.shields.io/npm/dt/btwn.svg)]()
+# btwn [![npm](https://img.shields.io/npm/v/btwn.svg)]() [![npm](https://img.shields.io/npm/dt/btwn.svg)]() [![Build Status](https://travis-ci.org/moriczgergo/btwn.svg?branch=master)](https://travis-ci.org/moriczgergo/btwn)
 Check if a number is in your min-max bounds.
 
  * Lightweight
