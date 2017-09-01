@@ -1,7 +1,15 @@
 language: node_js
 node_js:
-	- "v8.4.0"
+- 8.4.0
 install:
-	- npm install -g mocha
+- npm install -g mocha
 script:
-	- npm run test
+- npm run test
+deploy:
+  provider: npm
+  email: greg@trofix.co
+  api_key:
+    secure: t2aQto3XwplazAdtpjki/MGZGrvzWgGVJ+mjd9Apjq6MSHFSI1Yncgg36nPQNhZRB49DuobMvKUmkkhUWO6Dtva2pBEb4CGIz+39c//8jV9GjXoerV5vp+ywCdvzB3h1Al9Fvit91vMs1uVvgzcyROLRFPBNNAe/BKx3zeL2l48OvWla6kifotgqE25iwawuvw3XCxR7zUtJNYlHjMkeBK91eqsZ+GOTNTkK/aqleKfKvjp4ImcmfITKJy8WR6doFRkn6FjWQfUo0zApB7GfoIx5fqAUgI7gUMxfvP10ZXXreMd/vvTm3my0SHycL5y26zNXxg7KOdJ1+sPnC95azkiNfa1B5elOcl0QH+0MeDNB6g8Wg0H7R3DSZ/yC0CSN/DOSgKU5IUxhEZtTMvA0c/Ccqt0Sj3A406IMGrtxxJRIBCAAS2wztVu4Lpa26gIc1x3QkvpHHoMu12CFHhdUovX4g6IsysRX0FVU8wF7KzIrPM7vwDdbZJhulY0DRD5BFC97DApGrmcVZKQSd/BMo+hyFKHLmxmujRrbZ971b63dzyIzwhiQW9mdHv1/39hxVxtM8Inl23GuMqpnzSa66/Y36KxSr2Gsfb2LdqVAmcAK7znaSFDukQ5AGPD5JzRaiDN3dARZ62BO27fWJmaT0fPBDgQ43N1BFwFudIBQtvM=
+  on:
+    tags: true
+    repo: moriczgergo/btwn
