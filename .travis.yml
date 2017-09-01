@@ -1,0 +1,7 @@
+language: node_js
+node_js:
+	- "v8.4.0"
+install:
+	- npm install -g mocha
+script:
+	- npm run test
