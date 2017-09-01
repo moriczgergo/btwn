@@ -1,6 +1,6 @@
 Number.prototype.btwn = function(min, max, inclusive = true) {
 	var n = this.valueOf();
-	if (closed) {
+	if (inclusive) {
 		return n >= min && n <= max;
 	} else {
 		if (min == max) {
