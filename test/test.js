@@ -2,15 +2,15 @@ var assert = require('assert');
 require('./../index');
 describe("Number#btwn", function() {
 	var i = 17;
-	it("checks the number with closed bounds", function() {
+	it("checks the number with inclusive bounds", function() {
 		var x = i.btwn(1, 17);
 		assert.equal(x, true, 'i.btwn(1,17) is true (i=17)');
 	});
-	it("checks the number with open bounds", function() {
+	it("checks the number with exclusive bounds", function() {
 		var x = i.btwn(1, 17, false);
 		assert.equal(x, false, 'i.btwn(1,17, false) is false (i=17)');
 	});
-	it("throws error if min and max are the same and using open bounds", function() {
+	it("throws error if min and max are the same and using exclusive bounds", function() {
 		assert.throws(function() {
 			var x = i.btwn(17,17,false);
 		});

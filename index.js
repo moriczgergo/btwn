@@ -1,4 +1,4 @@
-Number.prototype.btwn = function(min, max, closed = true) {
+Number.prototype.btwn = function(min, max, inclusive = true) {
 	var n = this.valueOf();
 	if (closed) {
 		return n >= min && n <= max;
