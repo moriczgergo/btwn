@@ -1,4 +1,4 @@
-# btwn
+# btwn [![npm](https://img.shields.io/npm/v/btwn.svg)]() [![npm](https://img.shields.io/npm/dt/btwn.svg)]()
 Check if a number is in your min-max bounds.
 
  * Lightweight
@@ -17,7 +17,7 @@ yarn add btwn
 
 ## Usage
 
-```
+```js
 require('btwn');
 
 var x = 12; // a normal Number type variable
@@ -36,6 +36,10 @@ if(x.btwn(1, 13)){
  * min - Minimum value.
  * max - Maximum value.
  * closed - Are the bounds closed or not. If this is true, min and max are inclusive. (Default: true)
+
+## To-do
+
+ * [ ] Integrate into dates
 
 ## Tests
 
