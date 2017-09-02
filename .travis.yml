@@ -19,7 +19,7 @@ deploy:
 - provider: releases
   api_key:
     secure: GKbkw+KUzXf5pqhDXlApJHsiOPkV0xVr3PxswIn6izSJ0ONMRmgtFj3xznnuGWvjRqwH50yQuwKgVir3LMG4FEHFx1LEG1s6Yv2p/oR6T/UUm+7H9OB/+nKSJw1QFxvA8wxRNM+NQpMKbekXS1PZYcFufiXKj0Q0jfYOv9xXcxUYe2SflXGLanmda2nzCwB8rJ0utN7KK2CixouI6Ik3T2wEKwzj2D8ZjBCChhu8reMKmDGHsfFxCIberIjM3C3/h+5JHewdImuKkLAiVsbcFmXXqPkfxRvYc+dgHNpWwgH6r/unHKzgZuecMZLJ0kiIUmFESTHpKOYHn7+HvG6WMG5JILGzHAy7eU/811IFQPRSdzH/zcOWRUF75tdwlqwF5upFP6kNzsfdCPCbwL44tSY0P76iDB2cXRMlAstK4CfTmSvwpGr8Nj3ZGyu2dT2IAJ1a3oz0x6Zrm+gG4voN3rcpBJJ/NCUxWSbFpaV7CFcSFHthr6lbqySUKMJ9OgJX+/tmtB12X1EjPFWgtw9dRf7L3ee4t0YkwIW0wQfdHqDyVKyA2HnYN9nXZ5ZMGSmfZRq6BOaXzl57ngbsHsp7xkZWuIfhbHJlFKtuNI6JZ7R9qEX4Q/mJ7RCgv9VSMb8nYBj4pdcMYFy1SbdLEJ3y1q7eimG8gzF4RclJz/YMqxM=
-  file: btwn.js
+  file: $TRAVIS_BUILD_DIR/btwn.js
   on:
     tags: true
     repo: moriczgergo/btwn
