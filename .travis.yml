@@ -7,6 +7,7 @@ script:
 - npm run test
 after_success:
 - npm run browserify
+- ls
 deploy:
 - provider: npm
   email: greg@trofix.co
