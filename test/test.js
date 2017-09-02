@@ -1,5 +1,23 @@
 var assert = require('assert');
-require('./../index');
+var btwn = require('./../index');
+describe("BoundDate", function(){
+	it("correctly creates a bounddate from a date", function(){
+		var d = new Date(2017, 0, 1, 9, 00, 00, 00);
+		var bd = new btwn.BoundDate(d, true, false, true, false, true, false, false);
+		assert.equal(bd.year, d.getFullYear());
+		assert.equal(bd.month, null);
+		assert.equal(bd.day, d.getDate());
+		assert.equal(bd.hours, null);
+		assert.equal(bd.minutes, d.getMinutes());
+		assert.equal(bd.seconds, null);
+		assert.equal(bd.ms, null);
+	});
+	it("assumes ms is false by default in the constructor", function(){
+		var d = new Date(2017, 0, 1, 9, 00, 00, 00);
+		var bd = new btwn.BoundDate(d, true, false, true, false, true, false);
+		assert.equal(bd.ms, null);
+	});
+});
 describe("Number#btwn", function() {
 	var i = 17;
 	it("checks the number with inclusive bounds", function() {
@@ -22,5 +40,29 @@ describe("Number#btwn", function() {
 	it("returns false if the number is higher than the bounds", function() {
 		var x = i.btwn(1, 15);
 		assert.equal(x, false, 'i.btwn(1,15) is false (i=17)');
+	});
+});
+describe("Date#btwn", function() {
+	var min = new btwn.BoundDate(new Date(2017, 00, 01, 09, 00, 00, 00), false, false, false, true, true, false, false);
+	var max = new btwn.BoundDate(new Date(2017, 00, 01, 09, 59, 59, 00), false, false, false, true, true, true, false);
+	it("checks the date with inclusive bounds", function() {
+		var d = new Date(2017, 00, 01, 09, 59, 59, 00);
+		var x = d.btwn(min, max);
+		assert.equal(x, true);
+	});
+	it("checks the date with exclusive bounds", function() {
+		var d = new Date(2017, 00, 01, 09, 59, 59, 00);
+		var x = d.btwn(min, max, false);
+		assert.equal(x, false);
+	});
+	it("returns false if the date is lower than the bounds", function() {
+		var d = new Date(2017, 00, 01, 08, 59, 59, 00);
+		var x = d.btwn(min, max);
+		assert.equal(x, false);
+	});
+	it("returns false if the date is higher than the bounds", function() {
+		var d = new Date(2017, 00, 01, 10, 00, 00, 00);
+		var x = d.btwn(min, max);
+		assert.equal(x, false);
 	});
 });
