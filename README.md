@@ -51,6 +51,9 @@ if(d.btwn(min, max)){
 	console.log("It's before 9:00:00 or after 9:59:59.");
 }
 ```
+### Use in browser
+
+Download the latest `btwn.js` from [here](https://github.com/moriczgergo/btwn/releases/latest), and follow the instructions above without the `require` line.
 
 ## Docs
 
