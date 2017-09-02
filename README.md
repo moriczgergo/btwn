@@ -40,8 +40,8 @@ var btwn = require('btwn');
 // Bounds are 09:00-09:59 (inclusive)
 var minDate = new Date(2017, 00, 01, 09, 00, 00, 00);
 var maxDate = new Date(2017, 00, 01, 09, 59, 59, 00);
-var min = new btwn.BoundDate(min, false, false, false, true, true, false, false); //See the usage of these booleans in the docs below
-var max = new btwn.BoundDate(max, false, false, false, true, true, true, false); //See the usage of these booleans in the docs below
+var min = new btwn.BoundDate(minDate, false, false, false, true, true, false, false); //See the usage of these booleans in the docs below
+var max = new btwn.BoundDate(maxDate, false, false, false, true, true, true, false); //See the usage of these booleans in the docs below
 
 var d = new Date(); //Current date & time
 
