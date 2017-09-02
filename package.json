@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha",
     "coverage": "nyc --reporter=html --reporter=text mocha",
-    "browserify": "browserify index.js -o btwn.js --standalone btwn"
+    "browserify": "browserify index.js -o $TRAVIS_BUILD_DIR/btwn.js --standalone btwn"
   },
   "repository": {
     "type": "git",
