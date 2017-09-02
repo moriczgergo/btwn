@@ -4,7 +4,7 @@ Check if a number is in your min-max bounds.
 
  * Lightweight
  * Builds into the Number prototype
- * 100% code coverage
+ * 93.3725% code coverage
 
 ## Install
 
