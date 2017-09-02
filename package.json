@@ -1,6 +1,6 @@
 {
   "name": "btwn",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Check if a number or date is in your min-max bounds.",
   "main": "index.js",
   "scripts": {
